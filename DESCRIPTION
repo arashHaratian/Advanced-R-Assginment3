@@ -1,12 +1,13 @@
 Package: lab3package
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Lab3 assignment for advanced R programming
+Version: 1.0.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Arash", "Haratian", , "araha147@student.liu.com", role = c("aut", "cre")),
+    person("Daniel", "Díaz-Roncero González", , "dandi692@student.liu.com", role = c("aut", "cre"))  
+Description: It provides the eucledean and dijkstra functions. The `eucledean()` calculates the 
+highest common divisor between two integers and the `dijkstra()` determines shortest paths from a 
+specific initial node to all the other nodes respectively.
+License: MIT License
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
