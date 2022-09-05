@@ -7,7 +7,7 @@
 
 _This is the repo for 3rd lab assignment for Advanced R Programming_
 
-TO install the package, use the following command in your R session:
+To install the package, use the following command in your R session:
 
 ```r
 # You have to install devtools before executing the command
