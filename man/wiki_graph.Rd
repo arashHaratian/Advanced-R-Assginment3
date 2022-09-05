@@ -7,8 +7,8 @@
 \format{
 A data frame with 18 rows and 3 columns:
 \describe{
-\item{v1}{names of the nodes, there is an edge between node in \code{v1} and \code{v2}, integer value}
-\item{v1}{names of the nodes, there is an edge between node in \code{v1} and \code{v2}, integer value}
+\item{v1}{names of the nodes, there is an edge between node in \code{v1} and \code{v2}, numeric value with no decimals}
+\item{v2}{names of the nodes, there is an edge between node in \code{v1} and \code{v2}, numeric value with no decimals}
 \item{w}{The weight of the edges, numeric value}
 }
 }
