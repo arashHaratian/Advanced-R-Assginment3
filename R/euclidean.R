@@ -9,6 +9,8 @@
 #' @param y is an integer or a numeric double value with no decimals 
 #'
 #' @return Function returns a numeric double value without decimals which corresponds to the greatest common divisor
+#' @section References: For more information you can read: 
+#' \href{https://en.wikipedia.org/wiki/Euclidean_algorithm}{Euclidean Algorithm}
 #' @export
 #'
 #' @examples

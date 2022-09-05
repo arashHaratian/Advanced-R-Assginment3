@@ -9,7 +9,8 @@
 #'
 #' @return A numeric vector. The vector contains the shortest path to every other node from the starting node or `init_node`.
 #'
-#' @section References: For more information you can read: \link{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
+#' @section References: For more information you can read:
+#' \href{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}{Dijkstra Algorithm}
 #' @export
 #'
 #' @examples

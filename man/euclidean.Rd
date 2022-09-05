@@ -21,6 +21,11 @@ This function calculates the greatest common divisor for the two given integer n
 \details{
 By consensus we considerate 0 to be the greatest common divisor of \code{x=0}, \code{y=0}
 }
+\section{References}{
+ For more information you can read:
+\href{https://en.wikipedia.org/wiki/Euclidean_algorithm}{Euclidean Algorithm}
+}
+
 \examples{
 euclidean(120,360) # = 120
 euclidean(79,3) # = 1

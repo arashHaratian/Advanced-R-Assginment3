@@ -20,7 +20,8 @@ A numeric vector. The vector contains the shortest path to every other node from
 This an R implementation of Dijkstra algorithm which finds the shortest path from \code{init_node} to all the other nodes
 }
 \section{References}{
- For more information you can read: \link{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
+ For more information you can read:
+\href{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}{Dijkstra Algorithm}
 }
 
 \examples{
