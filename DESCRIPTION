@@ -5,7 +5,7 @@ Authors@R:
     person("Arash", "Haratian", , "araha147@student.liu.com", role = c("aut", "cre"))
     person("Daniel", "Díaz-Roncero González", , "dandi692@student.liu.com", role = c("aut", "cre"))  
 Description: It provides the eucledean and dijkstra functions. The `eucledean()` calculates the highest common divisor between two integers and the `dijkstra()` determines shortest paths from a specific initial node to all the other nodes respectively.
-License: MIT License
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
