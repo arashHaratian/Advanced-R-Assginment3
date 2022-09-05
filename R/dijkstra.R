@@ -1,5 +1,23 @@
+#' Dijkstra algorithm
+#'
+#'This an R implementation of Dijkstra algorithm which finds the shortest path from `init_node` to all the other nodes
+#'
+#' @param graph A `data.frame` representing the graph. It has to have 3 columns: `v1` and `v2` which represent
+#'  an edge from the node in `v1` to the node in `v2`, and `w` which is the weight of that edge.
+#' @param init_node A numeric scalar. The algorithm will use `init_node` as the source and will find the
+#'  shortest path to all other nodes.
+#'
+#' @return A numeric vector. The vector contains the shortest path to every other node from the starting node or `init_node`.
+#' @export
+#'
+#' @examples
+#' data(wiki_graph)
+#'
+#' dijkstra(wiki_graph, 1) # 0 7 9 20 20 11
+#' dijkstra(wiki_graph, 3) # 9 10 0 11 11 2
+
 dijkstra <- function(graph, init_node){
-  
+
   stopifnot(
     length(init_node) == 1,
     names(graph) %in% c("v1", "v2", "w")
@@ -13,7 +31,7 @@ dijkstra <- function(graph, init_node){
   # setting names for the vector (to support nodes with alphabetic names)
   names(distance) <- node_unvisited
   node_names <- names(distance)
-  
+
   while(length(node_unvisited)){
 
     # selecting a node from unvisited nodes with lowest distance
@@ -22,15 +40,15 @@ dijkstra <- function(graph, init_node){
     if(length(node_current_name) > 1){
       node_current_name <- sample(node_current_name, 1)
     }
-   
-    
+
+
     # finding the neighbors of the current node which are not visited
     neighbors <- graph[graph$v1 == node_current_name, "v2"]
     neighbors <- neighbors[neighbors %in% node_unvisited]
 
     for(node in neighbors){
       # updating the distances
-      
+
       weight <- graph[graph$v1 == node_current_name & graph$v2 == node , "w"]
 
       distance_new <- distance[node_current_name] + weight
