@@ -1,3 +1,22 @@
+#' Euclidean Algorithm
+#'
+#' This function calculates the greatest common divisor for the two given integer numbers
+#' (or numeric double value with no decimals).
+#' 
+#' By consensus we considerate 0 to be the greatest common divisor of `x=0`, `y=0`
+#' 
+#' @param x is an integer or a numeric double value with no decimals 
+#' @param y is an integer or a numeric double value with no decimals 
+#'
+#' @return Function returns a numeric double value without decimals which corresponds to the greatest common divisor
+#' @export
+#'
+#' @examples
+#' euclidean(120,360) # = 120
+#' euclidean(79,3) # = 1
+#' euclidean(-8,36) # = 4
+#' euclidean(85,0) # = 85
+#' euclidean(-5L,20) # = 5
 euclidean <- function(x,y){
   # We first check whether the arguments are integer
 

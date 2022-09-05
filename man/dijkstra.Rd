@@ -10,7 +10,7 @@ dijkstra(graph, init_node)
 \item{graph}{A \code{data.frame} representing the graph. It has to have 3 columns: \code{v1} and \code{v2} which represent
 an edge from the node in \code{v1} to the node in \code{v2}, and \code{w} which is the weight of that edge.}
 
-\item{init_node}{a numeric scalar. The algorithm will use \code{init_node} as the source and will find the
+\item{init_node}{A numeric scalar. The algorithm will use \code{init_node} as the source and will find the
 shortest path to all other nodes.}
 }
 \value{
@@ -20,11 +20,8 @@ A numeric vector. The vector contains the shortest path to every other node from
 This an R implementation of Dijkstra algorithm which finds the shortest path from \code{init_node} to all the other nodes
 }
 \examples{
-
 data(wiki_graph)
 
 dijkstra(wiki_graph, 1) # 0 7 9 20 20 11
 dijkstra(wiki_graph, 3) # 9 10 0 11 11 2
-
-
 }
