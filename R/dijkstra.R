@@ -20,12 +20,16 @@
 
 dijkstra <- function(graph, init_node){
 
+
   stopifnot(
     length(init_node) == 1,
-    names(graph) %in% c("v1", "v2", "w")
+    is.numeric(init_node),
+    names(graph) %in% c("v1", "v2", "w"),
+    init_node %in% graph$v1
   )
 
   node_unvisited <- c(unique(graph$v1))
+
   # initializing the distances to infinity since it is unknown
   distance <- rep(Inf, length(node_unvisited))
   # the distance of the init_node to itself is zero
@@ -67,5 +71,5 @@ dijkstra <- function(graph, init_node){
 
   }
 
-  return(distance)
+  return(unname(distance))
 }
