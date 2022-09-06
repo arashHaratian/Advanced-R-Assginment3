@@ -21,30 +21,28 @@
 #' euclidean(-5L,20) # = 5
 euclidean <- function(x,y){
   # We first check whether the arguments are integer
-
+  
   stopifnot(is.vector(x=x,mode="numeric"), length(x)==1, x %% 1 == 0, 
             is.vector(x=y,mode="numeric"), length(y)==1, y %% 1 == 0)
-
-  # We sort the vector to get the smallest number
-  ordered_vector = sort(c(x, y), decreasing = FALSE)
+  
+  # We take the absolute values and sort the vector to get the smallest number
+  ordered_vector = sort(c(abs(x), abs(y)), decreasing = FALSE)
+  
+  # We check if one of the numbers is 0
   if(all(ordered_vector==c(0,0))){
     return(0)
   } else if(0 %in% ordered_vector){
-    return(abs(ordered_vector[!ordered_vector==0]))
+    return(ordered_vector[!ordered_vector==0])
   }
-
-  if ((ordered_vector[2] %% ordered_vector[1]) == 0) {
-    return(abs(ordered_vector[1]))
-  } else{
-    for (i in 2:ordered_vector[1]) {
-      # We check if the divisors of the smallest number are also divisor of the greatest,
-      # starting with the greatest divisor
-      if ((ordered_vector[1] %% i) == 0) {
-        if ((ordered_vector[2] %% (ordered_vector[1] / i)) == 0) {
-          return(abs(ordered_vector[1] / i))
-        }
-      }
-    }
-    return("There are no common divisors")
+  
+  # We apply the algorithm
+  r0 <- ordered_vector[2]
+  r1 <- ordered_vector[1]
+  r2 <- 1  # Initializing r2
+  while(r2 != 0){
+    r2 <- r0 %% r1
+    r0 <- r1
+    r1 <- r2
   }
+  return(r0)
 }
