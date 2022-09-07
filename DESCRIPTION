@@ -1,6 +1,6 @@
 Package: lab3package
 Title: Lab3 assignment for advanced R programming
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: 
     person("Arash", "Haratian", , "araha147@student.liu.com", role = c("aut", "cre"))
     person("Daniel", "Díaz-Roncero González", , "dandi692@student.liu.com", role = c("aut", "cre"))  
